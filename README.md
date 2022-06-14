@@ -2,6 +2,8 @@
 
 This is a middleware package to ease http authentication
 
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=flexbase-eng_http-client-middleware&metric=coverage)](https://sonarcloud.io/summary/new_code?id=flexbase-eng_http-client-middleware) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=flexbase-eng_http-client-middleware&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=flexbase-eng_http-client-middleware)
+
 ## Usage
 
 Using [wretch](https://github.com/elbywan/wretch)
