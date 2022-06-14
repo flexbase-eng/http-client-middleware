@@ -22,11 +22,6 @@ jobs:
       run: yarn build
     - name: yarn test
       run: yarn test
-
-  sonarcloud:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
       with:
@@ -34,3 +29,4 @@ jobs:
           -Dsonar.organization=${{env.SONAR_ORG}}
           -Dsonar.projectKey=${{env.SONAR_PROJECT_KEY}}
           -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
+          -Dsonar.scm.provider=git
