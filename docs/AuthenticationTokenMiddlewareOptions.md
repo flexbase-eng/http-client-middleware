@@ -29,7 +29,7 @@ The token accessor to be used by the middleware
 
 #### Defined in
 
-authentication/AuthenticationTokenMiddlewareOptions.ts:13
+[authentication/AuthenticationTokenMiddlewareOptions.ts:13](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/AuthenticationTokenMiddlewareOptions.ts#L13)
 
 ___
 
@@ -41,7 +41,7 @@ The authentication token store to be used by the middleware
 
 #### Defined in
 
-authentication/AuthenticationTokenMiddlewareOptions.ts:15
+[authentication/AuthenticationTokenMiddlewareOptions.ts:15](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/AuthenticationTokenMiddlewareOptions.ts#L15)
 
 ## Methods
 
@@ -57,4 +57,4 @@ A function to provide credentials to the middleware
 
 #### Defined in
 
-authentication/AuthenticationTokenMiddlewareOptions.ts:11
+[authentication/AuthenticationTokenMiddlewareOptions.ts:11](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/AuthenticationTokenMiddlewareOptions.ts#L11)

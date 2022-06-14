@@ -1,34 +1,34 @@
-# Class: PasswordAuthenticationTokenAccessor
+# Class: ClientCredentialsAuthenticationTokenAccessor
 
-Represents a type used to perform password authentication requests
+Represents a type used to perform client credential authentication requests
 
 ## Hierarchy
 
-- `AuthenticationTokenAccessorBase`<[`PasswordCredentials`](../wiki/PasswordCredentials)\>
+- `AuthenticationTokenAccessorBase`<[`ClientCredentials`](../wiki/ClientCredentials)\>
 
-  ↳ **`PasswordAuthenticationTokenAccessor`**
+  ↳ **`ClientCredentialsAuthenticationTokenAccessor`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](../wiki/PasswordAuthenticationTokenAccessor#constructor)
+- [constructor](../wiki/ClientCredentialsAuthenticationTokenAccessor#constructor)
 
 ### Methods
 
-- [generateBody](../wiki/PasswordAuthenticationTokenAccessor#generatebody)
-- [requestToken](../wiki/PasswordAuthenticationTokenAccessor#requesttoken)
-- [validateToken](../wiki/PasswordAuthenticationTokenAccessor#validatetoken)
+- [generateBody](../wiki/ClientCredentialsAuthenticationTokenAccessor#generatebody)
+- [requestToken](../wiki/ClientCredentialsAuthenticationTokenAccessor#requesttoken)
+- [validateToken](../wiki/ClientCredentialsAuthenticationTokenAccessor#validatetoken)
 
 ## Constructors
 
 ### constructor
 
-• **new PasswordAuthenticationTokenAccessor**()
+• **new ClientCredentialsAuthenticationTokenAccessor**()
 
 #### Inherited from
 
-AuthenticationTokenAccessorBase<PasswordCredentials\>.constructor
+AuthenticationTokenAccessorBase<ClientCredentials\>.constructor
 
 ## Methods
 
@@ -40,7 +40,7 @@ AuthenticationTokenAccessorBase<PasswordCredentials\>.constructor
 
 | Name | Type |
 | :------ | :------ |
-| `credentials` | [`PasswordCredentials`](../wiki/PasswordCredentials) |
+| `credentials` | [`ClientCredentials`](../wiki/ClientCredentials) |
 | `refreshToken` | `undefined` \| `string` |
 
 #### Returns
@@ -58,7 +58,7 @@ AuthenticationTokenAccessorBase.generateBody
 
 #### Defined in
 
-[authentication/PasswordCreds/PasswordAuthenticationTokenAccessor.ts:7](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/PasswordCreds/PasswordAuthenticationTokenAccessor.ts#L7)
+authentication/ClientCreds/ClientCredentialsAuthenticationTokenAccessor.ts:7
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 | Name | Type |
 | :------ | :------ |
-| `credentials` | [`PasswordCredentials`](../wiki/PasswordCredentials) |
+| `credentials` | [`ClientCredentials`](../wiki/ClientCredentials) |
 | `refreshToken` | `undefined` \| `string` |
 
 #### Returns

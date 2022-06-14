@@ -4,6 +4,8 @@
 
 ### Classes
 
+- [ClientCredentials](../wiki/ClientCredentials)
+- [ClientCredentialsAuthenticationTokenAccessor](../wiki/ClientCredentialsAuthenticationTokenAccessor)
 - [PasswordAuthenticationTokenAccessor](../wiki/PasswordAuthenticationTokenAccessor)
 - [PasswordCredentials](../wiki/PasswordCredentials)
 
@@ -48,7 +50,7 @@
 
 #### Defined in
 
-authentication/AuthenticationTokenMiddleware.ts:6
+[authentication/AuthenticationTokenMiddleware.ts:5](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/AuthenticationTokenMiddleware.ts#L5)
 
 ___
 
@@ -72,7 +74,7 @@ ___
 
 #### Defined in
 
-Middleware.ts:7
+[Middleware.ts:7](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/Middleware.ts#L7)
 
 ___
 
@@ -97,7 +99,7 @@ ___
 
 #### Defined in
 
-Middleware.ts:5
+[Middleware.ts:5](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/Middleware.ts#L5)
 
 ___
 
@@ -107,7 +109,7 @@ ___
 
 #### Defined in
 
-Middleware.ts:1
+[Middleware.ts:1](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/Middleware.ts#L1)
 
 ## Functions
 
@@ -127,4 +129,4 @@ Middleware.ts:1
 
 #### Defined in
 
-authentication/AuthenticationTokenMiddleware.ts:8
+[authentication/AuthenticationTokenMiddleware.ts:7](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/AuthenticationTokenMiddleware.ts#L7)

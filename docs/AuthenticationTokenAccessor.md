@@ -8,10 +8,6 @@ Represents a type used to request authentication tokens
 | :------ | :------ |
 | `Credentials` | The type of credentials to be used |
 
-## Implemented by
-
-- [`PasswordAuthenticationTokenAccessor`](../wiki/PasswordAuthenticationTokenAccessor)
-
 ## Table of contents
 
 ### Methods
@@ -42,7 +38,7 @@ a promise resolved with an authentication token if successful; null if failure
 
 #### Defined in
 
-authentication/AuthenticationTokenAccessor.ts:20
+[authentication/AuthenticationTokenAccessor.ts:20](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/AuthenticationTokenAccessor.ts#L20)
 
 ___
 
@@ -66,4 +62,4 @@ a promise resolved `true` if valid, `false` otherwise
 
 #### Defined in
 
-authentication/AuthenticationTokenAccessor.ts:13
+[authentication/AuthenticationTokenAccessor.ts:13](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/AuthenticationTokenAccessor.ts#L13)

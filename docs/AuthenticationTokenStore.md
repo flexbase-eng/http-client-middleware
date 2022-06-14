@@ -25,7 +25,7 @@ the [AuthenticationToken](../wiki/AuthenticationToken) if stored otherwise `null
 
 #### Defined in
 
-authentication/AuthenticationTokenStore.ts:11
+[authentication/AuthenticationTokenStore.ts:11](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/AuthenticationTokenStore.ts#L11)
 
 ___
 
@@ -47,4 +47,4 @@ Stores an [AuthenticationToken](../wiki/AuthenticationToken)
 
 #### Defined in
 
-authentication/AuthenticationTokenStore.ts:16
+[authentication/AuthenticationTokenStore.ts:16](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/AuthenticationTokenStore.ts#L16)

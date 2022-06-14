@@ -32,43 +32,43 @@ Represents options for a password authentication request
 
 #### Defined in
 
-authentication/PasswordCreds/PasswordCredentials.ts:20
+[authentication/PasswordCreds/PasswordCredentials.ts:20](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/PasswordCreds/PasswordCredentials.ts#L20)
 
 ## Properties
 
 ### grantType
 
-• **grantType**: `string` = `"password"`
+• **grantType**: `string` = `'password'`
 
 The grant type, defaults to *password*
 
 #### Defined in
 
-authentication/PasswordCreds/PasswordCredentials.ts:14
+[authentication/PasswordCreds/PasswordCredentials.ts:14](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/PasswordCreds/PasswordCredentials.ts#L14)
 
 ___
 
 ### password
 
-• **password**: `string` = `""`
+• **password**: `string` = `''`
 
 The password
 
 #### Defined in
 
-authentication/PasswordCreds/PasswordCredentials.ts:12
+[authentication/PasswordCreds/PasswordCredentials.ts:12](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/PasswordCreds/PasswordCredentials.ts#L12)
 
 ___
 
 ### refreshGrantType
 
-• **refreshGrantType**: `string` = `"refresh_token"`
+• **refreshGrantType**: `string` = `'refresh_token'`
 
 The refresh grant type, defaults to *refresh_token*
 
 #### Defined in
 
-authentication/PasswordCreds/PasswordCredentials.ts:16
+[authentication/PasswordCreds/PasswordCredentials.ts:16](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/PasswordCreds/PasswordCredentials.ts#L16)
 
 ___
 
@@ -80,40 +80,40 @@ The optional url used to send a refresh token
 
 #### Defined in
 
-authentication/PasswordCreds/PasswordCredentials.ts:8
+[authentication/PasswordCreds/PasswordCredentials.ts:8](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/PasswordCreds/PasswordCredentials.ts#L8)
 
 ___
 
 ### scope
 
-• **scope**: `string` = `""`
+• **scope**: `string` = `''`
 
 The requested scopes
 
 #### Defined in
 
-authentication/PasswordCreds/PasswordCredentials.ts:18
+[authentication/PasswordCreds/PasswordCredentials.ts:18](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/PasswordCreds/PasswordCredentials.ts#L18)
 
 ___
 
 ### tokenUrl
 
-• **tokenUrl**: `string` = `""`
+• **tokenUrl**: `string` = `''`
 
 The url used to request a token
 
 #### Defined in
 
-authentication/PasswordCreds/PasswordCredentials.ts:6
+[authentication/PasswordCreds/PasswordCredentials.ts:6](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/PasswordCreds/PasswordCredentials.ts#L6)
 
 ___
 
 ### username
 
-• **username**: `string` = `""`
+• **username**: `string` = `''`
 
 The user name
 
 #### Defined in
 
-authentication/PasswordCreds/PasswordCredentials.ts:10
+[authentication/PasswordCreds/PasswordCredentials.ts:10](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/PasswordCreds/PasswordCredentials.ts#L10)

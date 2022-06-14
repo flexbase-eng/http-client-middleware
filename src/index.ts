@@ -12,6 +12,10 @@ export { AuthenticationTokenMiddleware } from './authentication/AuthenticationTo
 
 export { TokenResponse } from './authentication/TokenResponse';
 
+export { ClientCredentialsAuthenticationTokenAccessor } from './authentication/ClientCreds/ClientCredentialsAuthenticationTokenAccessor';
+
+export { ClientCredentials } from './authentication/ClientCreds/ClientCredentials';
+
 export { PasswordAuthenticationTokenAccessor } from './authentication/PasswordCreds/PasswordAuthenticationTokenAccessor';
 
 export { PasswordCredentials } from './authentication/PasswordCreds/PasswordCredentials';

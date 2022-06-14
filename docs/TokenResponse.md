@@ -37,7 +37,7 @@ The access token string as issued by the authorization server
 
 #### Defined in
 
-authentication/TokenResponse.ts:22
+[authentication/TokenResponse.ts:22](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/TokenResponse.ts#L22)
 
 ___
 
@@ -49,7 +49,7 @@ If the access token expires, the server should reply with the duration of time t
 
 #### Defined in
 
-authentication/TokenResponse.ts:26
+[authentication/TokenResponse.ts:26](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/TokenResponse.ts#L26)
 
 ___
 
@@ -61,7 +61,7 @@ If the access token will expire, then it is useful to return a refresh token whi
 
 #### Defined in
 
-authentication/TokenResponse.ts:28
+[authentication/TokenResponse.ts:28](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/TokenResponse.ts#L28)
 
 ___
 
@@ -73,7 +73,7 @@ If the scope the user granted is identical to the scope the app requested, this 
 
 #### Defined in
 
-authentication/TokenResponse.ts:30
+[authentication/TokenResponse.ts:30](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/TokenResponse.ts#L30)
 
 ___
 
@@ -85,4 +85,4 @@ The type of token this is, typically just the string *Bearer*
 
 #### Defined in
 
-authentication/TokenResponse.ts:24
+[authentication/TokenResponse.ts:24](https://github.com/flexbase-eng/http-client-middleware/blob/9e54f5b/src/authentication/TokenResponse.ts#L24)
