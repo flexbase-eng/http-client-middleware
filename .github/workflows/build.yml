@@ -31,5 +31,6 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       with:
         args: >
-          -Dsonar.organization=flexbase
-          -Dsonar.projectKey=flexbase-eng_http-client-middleware
+          -Dsonar.organization=${{SONAR_ORG}}
+          -Dsonar.projectKey=${{SONAR_PROJECT_KEY}}
+          -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
