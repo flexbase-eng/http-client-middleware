@@ -1,13 +1,11 @@
-import { HttpClientMiddleware } from "../Middleware";
-import { AuthenticationToken } from "./AuthenticationToken";
-import { AuthenticationTokenMiddlewareOptions } from "./AuthenticationTokenMiddlewareOptions";
-
+import { HttpClientMiddleware } from '../Middleware';
+import { AuthenticationToken } from './AuthenticationToken';
+import { AuthenticationTokenMiddlewareOptions } from './AuthenticationTokenMiddlewareOptions';
 
 export type AuthenticationTokenMiddleware = (options: AuthenticationTokenMiddlewareOptions<any>) => HttpClientMiddleware;
 
-export const authenticationTokenMiddleware: AuthenticationTokenMiddleware = (options) => {
+export const authenticationTokenMiddleware: AuthenticationTokenMiddleware = options => {
     return next => async (url, requestContext) => {
-
         let token: AuthenticationToken | null = null;
 
         let authContext = requestContext.authContext;
@@ -17,7 +15,7 @@ export const authenticationTokenMiddleware: AuthenticationTokenMiddleware = (opt
             authContext = requestContext.authContext = {};
         }
 
-        let isAnon = authContext.isAnonymousRoute as boolean | undefined;
+        const isAnon = authContext.isAnonymousRoute as boolean | undefined;
 
         if (isAnon) {
             return next(url, requestContext);
@@ -32,7 +30,6 @@ export const authenticationTokenMiddleware: AuthenticationTokenMiddleware = (opt
         const valid = await options.tokenAccessor.validateToken(token);
 
         const setToken = (token: AuthenticationToken | null) => {
-
             options.tokenStore.storeToken(token);
 
             authContext.token = token;
@@ -42,27 +39,26 @@ export const authenticationTokenMiddleware: AuthenticationTokenMiddleware = (opt
             requestContext = {
                 ...requestContext,
                 headers: {
-                    ...requestContext.headers || {},
-                    Authorization: tokenString
+                    ...(requestContext.headers || {}),
+                    Authorization: tokenString,
                 },
-            }
-        }
+            };
+        };
 
         const requestToken = async () => {
             const creds = options.credentialProvider();
             token = await options.tokenAccessor.requestToken(creds, token?.refreshToken);
 
             setToken(token);
-        }
+        };
 
         if (!valid) {
             await requestToken();
-        }
-        else {
+        } else {
             setToken(token);
         }
 
-        let numberOfAttemptsMade = 0
+        let numberOfAttemptsMade = 0;
         const retryUnauthorized = async (response: Response): Promise<Response> => {
             ++numberOfAttemptsMade;
 
@@ -71,16 +67,14 @@ export const authenticationTokenMiddleware: AuthenticationTokenMiddleware = (opt
                     await requestToken();
 
                     return next(url, requestContext).then(retryUnauthorized);
-                }
-                else {
+                } else {
                     options.tokenStore.storeToken(null);
                 }
             }
 
             return response;
-        }
+        };
 
-        return next(url, requestContext)
-            .then(retryUnauthorized)
-    }
-}
+        return next(url, requestContext).then(retryUnauthorized);
+    };
+};

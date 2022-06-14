@@ -3,24 +3,24 @@
  */
 export interface AuthenticationToken {
     /** The type of the token */
-    tokenType: string,
+    tokenType: string;
     /** The token value */
-    token: string,
+    token: string;
     /** The expiration of a token in seconds since epoch */
-    expiration: number,
+    expiration: number;
     /** An optional refresh token value */
-    refreshToken?: string,
+    refreshToken?: string;
     /** The space delimited scopes associated with the token */
-    scope: string,
+    scope: string;
 }
 
 /** Creates an empty {@link AuthenticationToken} */
 export const createEmptyAuthenticationToken = (): AuthenticationToken => {
     return {
-        tokenType: "",
-        token: "",
+        tokenType: '',
+        token: '',
         expiration: 0,
-        refreshToken: "",
-        scope: ""
-    }
-}
+        refreshToken: '',
+        scope: '',
+    };
+};

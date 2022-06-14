@@ -1,4 +1,4 @@
-import { AuthenticationToken } from "./AuthenticationToken";
+import { AuthenticationToken } from './AuthenticationToken';
 
 /**
  * Represents a type used to manage storage of an authentication token

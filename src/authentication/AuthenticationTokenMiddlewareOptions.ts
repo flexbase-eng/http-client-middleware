@@ -1,5 +1,5 @@
-import { AuthenticationTokenAccessor } from "./AuthenticationTokenAccessor";
-import { AuthenticationTokenStore } from "./AuthenticationTokenStore";
+import { AuthenticationTokenAccessor } from './AuthenticationTokenAccessor';
+import { AuthenticationTokenStore } from './AuthenticationTokenStore';
 
 /**
  * Represents options used by {@link AuthenticationTokenMiddleware}

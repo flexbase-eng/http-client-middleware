@@ -18,9 +18,11 @@ jobs:
     - uses: actions/setup-node@v3
     - name: yarn install
       run: yarn install
-    - name: yarn build
+    - name: Build
       run: yarn build
-    - name: yarn test
+    - name: Lint
+      run: yarn lint
+    - name: Test
       run: yarn test
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
@@ -29,4 +31,3 @@ jobs:
           -Dsonar.organization=${{env.SONAR_ORG}}
           -Dsonar.projectKey=${{env.SONAR_PROJECT_KEY}}
           -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
-          -Dsonar.scm.provider=git

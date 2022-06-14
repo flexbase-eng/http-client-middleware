@@ -27,5 +27,5 @@ export interface TokenResponse {
     /** If the access token will expire, then it is useful to return a refresh token which applications can use to obtain another access token. However, tokens issued with the implicit grant cannot be issued a refresh token */
     refresh_token?: string;
     /** If the scope the user granted is identical to the scope the app requested, this parameter is optional. If the granted scope is different from the requested scope, such as if the user modified the scope, then this parameter is required */
-    scope?: string
+    scope?: string;
 }
