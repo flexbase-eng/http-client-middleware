@@ -31,5 +31,5 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       with:
         args: >
-          -Dsonar.organization=${SONAR_ORG}
-          -Dsonar.projectKey=${SONAR_PROJECT_KEY}
+          -Dsonar.organization=flexbase
+          -Dsonar.projectKey=flexbase-eng_http-client-middleware
