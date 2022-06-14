@@ -30,8 +30,4 @@ jobs:
         fetch-depth: 0 # Disabling shallow clone is recommended for improving relevancy of reporting
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
-      with:
-        args: >
-          -Dsonar.organization=${SONAR_ORG}
-          -Dsonar.projectKey=${SONAR_PROJECT_KEY}
-          -Dsonar.login=${SONAR_TOKEN}
+     
