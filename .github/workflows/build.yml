@@ -30,7 +30,6 @@ jobs:
     - name: SonarCloud Scan
       uses: sonarsource/sonarcloud-github-action@master
       with:
-        projectBaseDir: coverage
         args: >
           -Dsonar.organization=${SONAR_ORG}
           -Dsonar.projectKey=${SONAR_PROJECT_KEY}
