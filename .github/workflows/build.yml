@@ -22,6 +22,7 @@ jobs:
       run: yarn test
 
   sonarcloud:
+    needs: build
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -31,5 +32,6 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       with:
         args: >
-          -Dsonar.organization=${SONAR_ORG}
-          -Dsonar.projectKey=${SONAR_PROJECT_KEY}
+          -Dsonar.organization=$SONAR_ORG
+          -Dsonar.projectKey=$SONAR_PROJECT_KEY
+          -Dsonar.login=$SONAR_TOKEN
