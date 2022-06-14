@@ -32,6 +32,6 @@ jobs:
       uses: sonarsource/sonarcloud-github-action@master
       with:
         args: >
-          -Dsonar.organization=$SONAR_ORG
-          -Dsonar.projectKey=$SONAR_PROJECT_KEY
-          -Dsonar.login=$SONAR_TOKEN
+          -Dsonar.organization=${SONAR_ORG}
+          -Dsonar.projectKey=${SONAR_PROJECT_KEY}
+          -Dsonar.login=${SONAR_TOKEN}
