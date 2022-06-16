@@ -13,7 +13,7 @@ jobs:
     needs: build
     uses: flexbase-eng/.github/.github/workflows/typescript.sonarcloud.yml@main
     with:
-      project_key: ${{ env.SONAR_PROJECT_KEY }}
+      project_key: flexbase-eng_http-client-middleware
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
