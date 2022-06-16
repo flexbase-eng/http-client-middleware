@@ -1,9 +1,10 @@
-name: Build
+name: Build Branch
 on:
   pull_request:
 
 env:
   SONAR_PROJECT_KEY: flexbase-eng_http-client-middleware
+  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
 jobs:
   build:
