@@ -8,38 +8,6 @@ This is a middleware package to ease http authentication
 
 Using [wretch](https://github.com/elbywan/wretch)
 
-### Client Credentials
-```typescript
-const clientCredentials = {
-  tokenUrl: "https://some.url/auth/token",
-  refreshTokenUrl: "https://some.url/auth/refresh",
-  clientId: "myclient id",
-  clientSecret: "super secret"
-};
-
-class SimpleAuthenticationTokenStore implements AuthenticationTokenStore {
-    private _authenticationToken: AuthenticationToken | null = null;
-
-    retrieveToken(): IAuthenticationToken | null {
-        return this._authenticationToken;
-    }
-
-    storeToken(token: IAuthenticationToken | null): void {
-        this._authenticationToken = token;
-    }
-}
-
-const authMiddleware = authenticationTokenMiddleware({
-    credentialProvider: () => clientCredentials,
-    tokenAccessor: new ClientCredentialsAuthenticationTokenAccessor(),
-    tokenStore: new SimpleAuthenticationTokenStore()
-});
-
-wretch(...).middlewares([authMiddleware]);
-```
-
-### Password Credentials
-
 ```typescript
 // for password creds we only need to supply the urls as user/pass will come from a login form
 const passwordCredentials = {
