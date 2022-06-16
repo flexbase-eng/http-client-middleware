@@ -8,15 +8,14 @@ jenv:
 
 jobs:
   build:
-    uses: flexbase-eng/typescript.build.yml@latest
+    uses: flexbase-eng/.github/.github/workflows/typescript.build.yml@main
   
   coverage:
     needs: build
-    uses: flexbase-eng/typescript.sonarcloud.yml@latest
+    uses: flexbase-eng/.github/.github/workflows/typescript.sonarcloud.yml@main
     with:
       project_key: ${{ env.SONAR_PROJECT_KEY }}
 
   publish:
     needs: coverage
-    uses: flexbase-eng/typescript.publish.yml@latest
- 
+    uses: flexbase-eng/.github/.github/workflows/typescript.publish.yml@main
