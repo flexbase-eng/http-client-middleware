@@ -7,16 +7,16 @@ env:
 
 jobs:
   build:
-    uses: flexbase-eng/.github/.github/workflows/typescript.build.yml@latest
+    uses: flexbase-eng/workflows/typescript.build.yml@latest
   
   coverage:
     needs: build
-    uses: flexbase-eng/.github/.github/workflows/typescript.sonarcloud.yml@latest
+    uses: flexbase-eng/.github/workflows/typescript.sonarcloud.yml@latest
     with:
       project_key: ${{ env.SONAR_PROJECT_KEY }}
 
   publish:
     needs: coverage
-    uses: flexbase-eng/.github/.github/workflows/typescript.publish.yml@latest
+    uses: flexbase-eng/.github/workflows/typescript.publish.yml@latest
     with:
       tag: beta
