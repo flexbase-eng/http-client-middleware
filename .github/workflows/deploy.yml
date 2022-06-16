@@ -3,37 +3,20 @@ on:
   push:
     branches: main
 
-env:
-  SONAR_ORG: flexbase
+jenv:
   SONAR_PROJECT_KEY: flexbase-eng_http-client-middleware
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0 # Disabling shallow clone is recommended for improving relevancy of reporting
-    - uses: actions/setup-node@v3
-      with:
-        registry-url: 'https://registry.npmjs.org'
-    - name: yarn install
-      run: yarn install
-    - name: Build
-      run: yarn build
-    - name: Lint
-      run: yarn lint
-    - name: Test
-      run: yarn test
-    - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
-      with:
-        args: >
-          -Dsonar.organization=${{env.SONAR_ORG}}
-          -Dsonar.projectKey=${{env.SONAR_PROJECT_KEY}}
-          -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
-    - name: Publish
-      run: yarn publish
+    uses: flexbase-eng/.github/workflows/typescript.build.yml
+  
+  coverage:
+    needs: build
+    uses: flexbase-eng/.github/workflows/typescript.sonarcloud.yml
+    with:
+      project_key: ${{ env.SONAR_PROJECT_KEY }}
+
+  publish:
+    needs: coverage
+    uses: flexbase-eng/.github/workflows/typescript.publish.yml
+ 
