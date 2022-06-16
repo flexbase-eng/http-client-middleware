@@ -19,3 +19,5 @@ jobs:
     uses: flexbase-eng/.github/.github/workflows/typescript.publish.yml@main
     with:
       tag: beta
+    secrets:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
