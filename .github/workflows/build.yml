@@ -2,9 +2,6 @@ name: Build Branch
 on:
   pull_request:
 
-env:
-  SONAR_PROJECT_KEY: flexbase-eng_http-client-middleware
-
 jobs:
   build:
     uses: flexbase-eng/.github/.github/workflows/typescript.build.yml@main
