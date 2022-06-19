@@ -153,6 +153,6 @@
       "type",
       "bin"
     ],
-    "include": ["dist", "readme.md", "LICENSE", "yarn.lock"]
+    "include": ["dist", "README.md", "LICENSE", "yarn.lock"]
   }
 }
