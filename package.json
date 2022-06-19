@@ -14,7 +14,9 @@
   "bugs": {
     "url": "https://github.com/flexbase-eng/http-client-middleware/issues"
   },
+  "private": true,
   "devDependencies": {
+    "@flexbase/packr": "^1.0.0",
     "@types/jest": "^28.1.1",
     "@types/luxon": "^2.3.2",
     "@types/node": "^17.0.41",
@@ -47,7 +49,8 @@
     "prepare": "yarn run build",
     "test": "jest --no-cache",
     "lint": "eslint 'src/**/*.{ts,tsx,json}'",
-    "format": "prettier --write 'src/**/*.{ts,tsx,css,md,json}'"
+    "format": "prettier --write 'src/**/*.{ts,tsx,css,md,json}'",
+    "packr": "packr"
   },
   "dependencies": {
     "luxon": "^2.4.0"
@@ -116,7 +119,7 @@
           "vars": "all",
           "args": "none"
         }
-      ],     
+      ],
       "@typescript-eslint/no-explicit-any": "warn",
       "@typescript-eslint/no-non-null-assertion": "warn",
       "@typescript-eslint/no-inferrable-types": "off"
@@ -132,5 +135,24 @@
     "coverage",
     "docs",
     "tests"
-  ]
+  ],
+  "packr": {
+    "output": "output",
+    "properties": [
+      "name",
+      "version",
+      "description",
+      "main",
+      "types",
+      "homepage",
+      "repository",
+      "bugs",
+      "author",
+      "license",
+      "dependencies",
+      "type",
+      "bin"
+    ],
+    "include": ["dist", "readme.md", "LICENSE", "yarn.lock"]
+  }
 }
