@@ -1,12 +1,10 @@
-import { DateTime } from "luxon";
-import { AuthenticationToken } from "./AuthenticationToken";
-import { AuthenticationTokenAccessor } from "./AuthenticationTokenAccessor";
-import { TokenResponse } from "./TokenResponse";
+import { DateTime } from 'luxon';
+import { AuthenticationToken } from './AuthenticationToken';
+import { AuthenticationTokenAccessor } from './AuthenticationTokenAccessor';
 import fetch from 'node-fetch';
 
 /** @ignore */
 export abstract class AuthenticationTokenAccessorBase<Credentials> implements AuthenticationTokenAccessor<Credentials> {
-
     validateToken(token: AuthenticationToken | null): Promise<boolean> {
         if (!token) {
             return Promise.resolve(false);
@@ -17,7 +15,7 @@ export abstract class AuthenticationTokenAccessorBase<Credentials> implements Au
         return Promise.resolve(exp > DateTime.utc());
     }
 
-    protected abstract generateBody(credentials: Credentials, refreshToken: string | undefined): {url:string, body: any};
+    protected abstract generateBody(credentials: Credentials, refreshToken: string | undefined): { url: string; body: any };
 
     protected coerceResponse(tokenResponse: any): AuthenticationToken | null {
         return {
@@ -30,8 +28,7 @@ export abstract class AuthenticationTokenAccessorBase<Credentials> implements Au
     }
 
     async requestToken(credentials: Credentials, refreshToken: string | undefined): Promise<AuthenticationToken | null> {
-        
-        const {url, body} = this.generateBody(credentials, refreshToken);
+        const { url, body } = this.generateBody(credentials, refreshToken);
 
         const formBody = Object.keys(body)
             .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(body[key]))

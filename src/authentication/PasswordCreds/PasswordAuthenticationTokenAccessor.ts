@@ -3,8 +3,7 @@ import { PasswordCredentials } from './PasswordCredentials';
 
 /** Represents a type used to perform password authentication requests */
 export class PasswordAuthenticationTokenAccessor extends AuthenticationTokenAccessorBase<PasswordCredentials> {
-    
-    protected generateBody(credentials: PasswordCredentials, refreshToken: string | undefined): { url: string; body: any; } {
+    protected generateBody(credentials: PasswordCredentials, refreshToken: string | undefined): { url: string; body: any } {
         let url = '';
         const body: any = {};
 
