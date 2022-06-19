@@ -22,4 +22,6 @@ export { PasswordCredentials } from './authentication/PasswordCreds/PasswordCred
 
 export { MiddlewareContext, HttpClientMiddlewareHandler, HttpClientMiddleware } from './Middleware';
 
+export { AuthenticationTokenAccessorBase } from './authentication/AuthenticationTokenAccessorBase';
+
 export default authenticationTokenMiddleware;
