@@ -19,6 +19,16 @@ export abstract class AuthenticationTokenAccessorBase<Credentials> implements Au
 
     protected abstract generateBody(credentials: Credentials, refreshToken: string | undefined): {url:string, body: any};
 
+    protected coerceResponse(tokenResponse: any): AuthenticationToken | null {
+        return {
+            token: tokenResponse.access_token,
+            tokenType: tokenResponse.token_type || 'Bearer',
+            expiration: tokenResponse.expires_in,
+            refreshToken: tokenResponse.refresh_token,
+            scope: tokenResponse.scope || '',
+        };
+    }
+
     async requestToken(credentials: Credentials, refreshToken: string | undefined): Promise<AuthenticationToken | null> {
         
         const {url, body} = this.generateBody(credentials, refreshToken);
@@ -39,14 +49,8 @@ export abstract class AuthenticationTokenAccessorBase<Credentials> implements Au
             return null;
         }
 
-        const tokenResponse: TokenResponse = await response.json();
+        const tokenResponse = await response.json();
 
-        return {
-            token: tokenResponse.access_token,
-            tokenType: tokenResponse.token_type || 'Bearer',
-            expiration: tokenResponse.expires_in,
-            refreshToken: tokenResponse.refresh_token,
-            scope: tokenResponse.scope || '',
-        };
+        return this.coerceResponse(tokenResponse);
     }
 }
