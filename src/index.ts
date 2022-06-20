@@ -1,4 +1,4 @@
-import { authenticationTokenMiddleware } from './authentication/AuthenticationTokenMiddleware';
+export { authenticationTokenMiddleware } from './authentication/AuthenticationTokenMiddleware';
 
 export { AuthenticationToken } from './authentication/AuthenticationToken';
 
@@ -23,5 +23,3 @@ export { PasswordCredentials } from './authentication/PasswordCreds/PasswordCred
 export { MiddlewareContext, HttpClientMiddlewareHandler, HttpClientMiddleware } from './Middleware';
 
 export { AuthenticationTokenAccessorBase } from './authentication/AuthenticationTokenAccessorBase';
-
-export default authenticationTokenMiddleware;

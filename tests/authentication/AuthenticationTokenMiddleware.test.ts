@@ -1,4 +1,4 @@
-import authenticationTokenMiddleware, { AuthenticationToken, AuthenticationTokenAccessor, AuthenticationTokenStore } from '../../src/index';
+import { authenticationTokenMiddleware, AuthenticationToken, AuthenticationTokenAccessor, AuthenticationTokenStore } from '../../src/index';
 import { Mock, It, Times } from "moq.ts";
 import { goodRefreshToken, goodToken, mockUrl, oldToken, testTokenType } from '../mocks/server/constants';
 import { TestAuthenticationTokenStore } from '../mocks/TestAuthenticationTokenStore';
@@ -157,7 +157,7 @@ test("AuthenticationTokenMiddleware refresh token", async () => {
         scope: ""
     });
 
-    const tokenAccessor = new Mock<AuthenticationTokenAccessor<any>>()        
+    const tokenAccessor = new Mock<AuthenticationTokenAccessor<any>>()
         .setup(m => m.requestToken(It.IsAny<any>(), It.Is<string | undefined>(s => s === goodRefreshToken))).returnsAsync({
             token: goodToken,
             tokenType: testTokenType,
@@ -200,7 +200,7 @@ test("AuthenticationTokenMiddleware existing valid token", async () => {
         scope: ""
     });
 
-    const tokenAccessor = new Mock<AuthenticationTokenAccessor<any>>()        
+    const tokenAccessor = new Mock<AuthenticationTokenAccessor<any>>()
         .setup(m => m.validateToken(It.IsAny<AuthenticationToken>())).returnsAsync(true)
         ;
 
