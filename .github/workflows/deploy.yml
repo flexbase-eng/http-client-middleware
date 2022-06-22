@@ -19,5 +19,4 @@ jobs:
   publish:
     needs: coverage
     uses: flexbase-eng/.github/.github/workflows/typescript.publish.npm.yml@main
-    secrets:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    secrets: inherit

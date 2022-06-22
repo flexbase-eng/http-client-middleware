@@ -15,3 +15,10 @@ jobs:
     with:
       project_key: flexbase-eng_http-client-middleware
     secrets: inherit
+
+  publish:
+    needs: coverage
+    uses: flexbase-eng/.github/.github/workflows/typescript.publish.npm.yml@main
+    with:
+      tag: beta
+    secrets: inherit
