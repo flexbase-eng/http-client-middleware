@@ -14,8 +14,7 @@ jobs:
     uses: flexbase-eng/.github/.github/workflows/typescript.sonarcloud.yml@main
     with:
       project_key: flexbase-eng_http-client-middleware
-    secrets:
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+    secrets: inherit
 
   publish:
     needs: coverage
