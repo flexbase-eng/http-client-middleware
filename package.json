@@ -1,6 +1,6 @@
 {
   "name": "@flexbase/http-client-middleware",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Http client middleware",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -160,6 +160,11 @@
       "bin",
       "keywords"
     ],
-    "include": ["dist", "README.md", "LICENSE", "yarn.lock"]
+    "include": [
+      "dist",
+      "README.md",
+      "LICENSE",
+      "yarn.lock"
+    ]
   }
 }

@@ -1,6 +1,6 @@
 export { authenticationTokenMiddleware } from './authentication/AuthenticationTokenMiddleware';
 
-export { AuthenticationToken } from './authentication/AuthenticationToken';
+export { AuthenticationToken, createEmptyAuthenticationToken } from './authentication/AuthenticationToken';
 
 export { AuthenticationTokenAccessor } from './authentication/AuthenticationTokenAccessor';
 
