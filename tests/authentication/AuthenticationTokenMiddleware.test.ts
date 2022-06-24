@@ -4,6 +4,7 @@ import { goodRefreshToken, goodToken, mockUrl, oldToken, testTokenType } from '.
 import { TestAuthenticationTokenStore } from '../mocks/TestAuthenticationTokenStore';
 import wretch from "wretch";
 import { DateTime } from 'luxon';
+import fetch from 'node-fetch';
 
 test("AuthenticationTokenMiddleware Success", async () => {
 
@@ -30,7 +31,7 @@ test("AuthenticationTokenMiddleware Success", async () => {
     });
 
     const client = wretch(mockUrl)
-        .polyfills({ fetch: require("node-fetch") })
+        .polyfills({ fetch })
         .accept("application/json")
         .middlewares([middleware])
         ;
@@ -56,7 +57,7 @@ test("AuthenticationTokenMiddleware Anonymous route", async () => {
     });
 
     const client = wretch(mockUrl)
-        .polyfills({ fetch: require("node-fetch") })
+        .polyfills({ fetch })
         .accept("application/json")
         .middlewares([middleware])
         ;
@@ -102,7 +103,7 @@ test("AuthenticationTokenMiddleware 401 then 200", async () => {
     });
 
     const client = wretch(mockUrl)
-        .polyfills({ fetch: require("node-fetch") })
+        .polyfills({ fetch })
         .accept("application/json")
         .middlewares([middleware])
         ;
@@ -135,7 +136,7 @@ test("AuthenticationTokenMiddleware fails", async () => {
     });
 
     const client = wretch(mockUrl)
-        .polyfills({ fetch: require("node-fetch") })
+        .polyfills({ fetch })
         .accept("application/json")
         .middlewares([middleware])
         ;
@@ -175,7 +176,7 @@ test("AuthenticationTokenMiddleware refresh token", async () => {
     });
 
     const client = wretch(mockUrl)
-        .polyfills({ fetch: require("node-fetch") })
+        .polyfills({ fetch })
         .accept("application/json")
         .middlewares([middleware])
         ;
@@ -211,7 +212,7 @@ test("AuthenticationTokenMiddleware existing valid token", async () => {
     });
 
     const client = wretch(mockUrl)
-        .polyfills({ fetch: require("node-fetch") })
+        .polyfills({ fetch })
         .accept("application/json")
         .middlewares([middleware])
         ;

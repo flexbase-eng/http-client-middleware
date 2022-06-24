@@ -1,8 +1,11 @@
 import { MockedRequest } from 'msw';
 import { server } from './mocks/server/server'
+import fetch from 'node-fetch';
+// @ts-ignore
+global.fetch = fetch;
 
 const unhandledRequest = (request: MockedRequest) => {
-  expect(request).fail("Undefined endpoint called: " + request.url);
+  console.error(`Undefined endpoint called:${request.method} ${request.url}`);
 }
 
 beforeAll(() => {
@@ -19,4 +22,4 @@ afterAll(() => {
   server.close();
 })
 
-export { }
+export {}

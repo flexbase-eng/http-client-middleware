@@ -3,6 +3,7 @@ import { ClientCredentialsAuthenticationTokenAccessor, ClientCredentials } from 
 import { badPass, badUser, goodPass, goodRefreshToken, goodToken, goodUser, tokenUrl, tokenUrl2 } from '../../mocks/server/constants';
 
 test("ClientCredentialsAuthenticationTokenAccessor Success", async () => {
+
     const tokenAccessor = new ClientCredentialsAuthenticationTokenAccessor();
     const response = await tokenAccessor.requestToken(new ClientCredentials({
         tokenUrl,

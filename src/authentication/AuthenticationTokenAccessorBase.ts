@@ -1,7 +1,6 @@
 import { DateTime } from 'luxon';
 import { AuthenticationToken } from './AuthenticationToken';
 import { AuthenticationTokenAccessor } from './AuthenticationTokenAccessor';
-import fetch from 'node-fetch';
 
 /** @ignore */
 export abstract class AuthenticationTokenAccessorBase<Credentials> implements AuthenticationTokenAccessor<Credentials> {
