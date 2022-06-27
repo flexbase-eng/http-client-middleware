@@ -65,5 +65,5 @@ const authMiddleware = authenticationTokenMiddleware({
     tokenStore: new SimpleAuthenticationTokenStore()
 });
 
-wretch(...).middlewares([authMiddleware]);
+wretch(...).middlewares([authMiddleware]); 
 ```
