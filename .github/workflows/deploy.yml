@@ -5,18 +5,18 @@ on:
 
 jobs:
   build:
-    uses: flexbase-eng/.github/.github/workflows/typescript.build.yml@main
+    uses: flexbase-eng/.github/.github/workflows/typescript.build.yml@chore-add-publish-npm
     with:
       package_folder: output
 
   coverage:
     needs: build
-    uses: flexbase-eng/.github/.github/workflows/typescript.sonarcloud.yml@main
+    uses: flexbase-eng/.github/.github/workflows/typescript.sonarcloud.yml@chore-add-publish-npm
     with:
       project_key: flexbase-eng_http-client-middleware
     secrets: inherit
 
   publish:
     needs: coverage
-    uses: flexbase-eng/.github/.github/workflows/typescript.publish.npm.yml@main
+    uses: flexbase-eng/.github/.github/workflows/typescript.publish.npm.yml@chore-add-publish-npm
     secrets: inherit
