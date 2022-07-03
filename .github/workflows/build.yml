@@ -20,5 +20,4 @@ jobs:
     needs: coverage
     uses: flexbase-eng/.github/.github/workflows/typescript.publish.npm.yml@chore-add-publish-npm
     with:
-      tag: beta
     secrets: inherit
