@@ -1,6 +1,6 @@
 {
   "name": "@flexbase/http-client-middleware",
-  "version": "1.9.0",
+  "version": "1.9.3",
   "description": "Http client middleware",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
