@@ -1,9 +1,10 @@
 {
   "name": "@flexbase/http-client-middleware",
-  "version": "1.9.3",
+  "version": "1.9.4",
   "description": "Http client middleware",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
+  "umd": "dist/index.umd.js",
   "types": "dist/index.d.ts",
   "author": "Flexbase",
   "license": "MIT",
