@@ -1,5 +1,6 @@
 export declare type MiddlewareContext = RequestInit & {
-    [key: string]: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
 };
 
 export declare type HttpClientMiddlewareHandler = (url: string, requestContext: MiddlewareContext) => Promise<Response>;

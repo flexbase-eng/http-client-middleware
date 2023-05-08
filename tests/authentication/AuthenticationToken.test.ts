@@ -1,7 +1,8 @@
-import { createEmptyAuthenticationToken } from "../../src/authentication/AuthenticationToken";
+import { test, expect } from 'vitest';
+import { createEmptyAuthenticationToken } from '../../src/authentication/authentication.token';
 
-test("AuthenticationToken Create empty object", () => {
-    const token = createEmptyAuthenticationToken();
+test('AuthenticationToken Create empty object', () => {
+  const token = createEmptyAuthenticationToken();
 
-    expect(token).not.toBeNull();
+  expect(token).not.toBeNull();
 });
