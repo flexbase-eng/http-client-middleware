@@ -1,10 +1,10 @@
-export { authenticationTokenMiddleware } from './authentication/authentication.token,middleware.js';
+export { authenticationTokenMiddleware } from './authentication/authentication.token.middleware.js';
 export { AuthenticationToken } from './authentication/authentication.token.js';
 export { createEmptyAuthenticationToken } from './authentication/authentication.token.js';
 export { AuthenticationTokenAccessor } from './authentication/authentication.token.accessor.js';
 export { AuthenticationTokenStore } from './authentication/authentication.token.store.js';
 export { AuthenticationTokenMiddlewareOptions } from './authentication/authentication.token.middleware.options.js';
-export { AuthenticationTokenMiddleware } from './authentication/authentication.token,middleware.js';
+export { AuthenticationTokenMiddleware } from './authentication/authentication.token.middleware.js';
 export { TokenResponse } from './authentication/token.response.js';
 export { ClientCredentialsAuthenticationTokenAccessor } from './authentication/client-creds/client.credentials.authentication.token.accessor.js';
 export { ClientCredentials } from './authentication/client-creds/client.credentials.js';
