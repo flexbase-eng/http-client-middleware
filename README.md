@@ -3,7 +3,7 @@
 
 # http-client-middleware
 
-This is a middleware package to ease http authentication.
+This is a middleware package to wrap http authentication.
 
 ## Usage
 
