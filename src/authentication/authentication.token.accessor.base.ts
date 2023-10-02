@@ -43,7 +43,7 @@ export abstract class AuthenticationTokenAccessorBase<Credentials> implements Au
       body: formBody,
     });
 
-    if (!response.ok) {
+    if (response.status < 200 || response.status > 299) {
       return null;
     }
 
