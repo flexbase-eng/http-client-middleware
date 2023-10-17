@@ -12,6 +12,8 @@ export interface AuthenticationToken {
   refreshToken?: string;
   /** The space delimited scopes associated with the token */
   scope: string;
+  /** The last 4 digits of the phone number receiving the 2fa code */
+  challengePhoneNumberLastFour?: string;
 }
 
 /** Creates an empty {@link AuthenticationToken} */
