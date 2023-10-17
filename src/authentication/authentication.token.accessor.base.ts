@@ -25,6 +25,7 @@ export abstract class AuthenticationTokenAccessorBase<Credentials> implements Au
       expiration: tokenResponse.expires_in,
       refreshToken: tokenResponse.refresh_token,
       scope: tokenResponse.scope || '',
+      challengePhoneNumberLastFour: tokenResponse.challenge_phone_number_last_four,
     };
   }
 
