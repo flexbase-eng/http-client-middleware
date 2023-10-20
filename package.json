@@ -42,13 +42,13 @@
     "src/**/*.{ts,tsx,css,json}": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "luxon": "^3.4.3"
+    "luxon": "^3.1.0"
   },
   "devDependencies": {
     "@flexbase/packr": "^1.0.0",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
-    "@types/luxon": "^3.3.3",
+    "@types/luxon": "^3.1.0",
     "@types/node": "^20.8.7",
     "@types/node-fetch": "^2.6.7",
     "@typescript-eslint/eslint-plugin": "^6.8.0",
