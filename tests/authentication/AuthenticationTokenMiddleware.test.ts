@@ -1,4 +1,3 @@
-import { test, expect } from 'vitest';
 import { authenticationTokenMiddleware, AuthenticationToken, AuthenticationTokenAccessor, AuthenticationTokenStore } from '../../src/index';
 import { Mock, It, Times } from 'moq.ts';
 import { goodRefreshToken, goodToken, mockUrl, oldToken, testTokenType } from '../mocks/server/constants';
