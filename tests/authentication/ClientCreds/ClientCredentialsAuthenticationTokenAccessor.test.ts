@@ -1,6 +1,5 @@
-import { test, expect } from 'vitest';
 import { DateTime } from 'luxon';
-import { ClientCredentialsAuthenticationTokenAccessor, ClientCredentials } from '../../../src/index';
+import { ClientCredentialsAuthenticationTokenAccessor, ClientCredentials } from '../../../src';
 import { badPass, badUser, goodPass, goodRefreshToken, goodToken, goodUser, tokenUrl, tokenUrl2 } from '../../mocks/server/constants';
 
 test('ClientCredentialsAuthenticationTokenAccessor Success', async () => {
@@ -12,7 +11,7 @@ test('ClientCredentialsAuthenticationTokenAccessor Success', async () => {
       clientSecret: goodPass,
       scope: 'scope',
     }),
-    undefined
+    undefined,
   );
 
   expect(response).not.toBeNull();
@@ -34,7 +33,7 @@ test('ClientCredentialsAuthenticationTokenAccessor Success but returns no tokenT
       clientId: goodUser,
       clientSecret: goodPass,
     }),
-    undefined
+    undefined,
   );
 
   expect(response).not.toBeNull();
@@ -56,7 +55,7 @@ test('ClientCredentialsAuthenticationTokenAccessor bad user/pass', async () => {
       clientId: badUser,
       clientSecret: badPass,
     }),
-    undefined
+    undefined,
   );
 
   const token = response;
@@ -107,7 +106,7 @@ test('ClientCredentialsAuthenticationTokenAccessor refresh token success', async
       clientId: goodUser,
       scope: 'scope',
     }),
-    goodRefreshToken
+    goodRefreshToken,
   );
 
   expect(response).not.toBeNull();
@@ -130,7 +129,7 @@ test('ClientCredentialsAuthenticationTokenAccessor refresh token success but no 
       clientId: goodUser,
       scope: 'scope',
     }),
-    goodRefreshToken
+    goodRefreshToken,
   );
 
   expect(response).not.toBeNull();
@@ -154,7 +153,7 @@ test('ClientCredentialsAuthenticationTokenAccessor request token exception', asy
         clientId: badUser,
         clientSecret: badPass,
       }),
-      undefined
-    )
+      undefined,
+    ),
   ).rejects.toThrow();
 });
