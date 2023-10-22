@@ -45,7 +45,6 @@ export abstract class AuthenticationTokenAccessorBase<Credentials> implements Au
     });
 
     if (response.status < 200 || response.status > 299) {
-      console.error('response was not successful');
       return null;
     }
 
