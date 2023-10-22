@@ -1,6 +1,6 @@
 {
   "name": "@flexbase/http-client-middleware",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "Http client middleware",
   "author": "Flexbase",
   "license": "MIT",
