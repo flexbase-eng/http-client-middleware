@@ -14,6 +14,8 @@ interface TokenRequest {
 }
 
 const createToken = (request: any, response: any, context: any, token_type: string | null) => {
+  console.info(request);
+
   const contentType: string = request.headers.get('Content-Type');
   const isXURL: boolean = contentType.startsWith('application/x-www-form-urlencoded');
 
