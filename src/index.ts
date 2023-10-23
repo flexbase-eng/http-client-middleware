@@ -1,6 +1,6 @@
 export { authenticationTokenMiddleware } from './authentication/authentication.token.middleware.js';
 export type { AuthenticationToken } from './authentication/authentication.token.js';
-export type { createEmptyAuthenticationToken } from './authentication/authentication.token.js';
+export { createEmptyAuthenticationToken } from './authentication/authentication.token.js';
 export type { AuthenticationTokenAccessor } from './authentication/authentication.token.accessor.js';
 export type { AuthenticationTokenStore } from './authentication/authentication.token.store.js';
 export type { AuthenticationTokenMiddlewareOptions } from './authentication/authentication.token.middleware.options.js';
